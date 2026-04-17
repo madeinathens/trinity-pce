@@ -1,0 +1,154 @@
+/* Trinity PCE — Alchemical Terminal Theme */
+/* x⁰ = 1 */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ─── HEADER ──────────────────────────────────────────────────────── */
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.sigil {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #00ff88;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  margin-bottom: 1.5rem;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  margin: 0 0 1rem 0;
+  color: #e8e8e8;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #888;
+  letter-spacing: 0.15rem;
+  margin: 0;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+/* ─── MAIN ────────────────────────────────────────────────────────── */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.connect-section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ─── STATUS BLOCK (when connected) ───────────────────────────────── */
+
+.status {
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  padding: 1.5rem 2rem;
+  background: rgba(0, 255, 136, 0.02);
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.85rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.status-line .label {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.status-line .value {
+  color: #00ff88;
+  letter-spacing: 0.05rem;
+}
+
+.status-line .mono {
+  word-break: break-all;
+  text-align: right;
+}
+
+/* ─── INTRO (when not connected) ──────────────────────────────────── */
+
+.intro {
+  max-width: 600px;
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.intro p {
+  margin: 1rem 0;
+  font-size: 1.05rem;
+}
+
+.axiom {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  color: #00ff88;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.05rem;
+  opacity: 0.85;
+}
+
+/* ─── FOOTER ──────────────────────────────────────────────────────── */
+
+.footer {
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  color: #555;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  letter-spacing: 0.1rem;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .sigil {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
