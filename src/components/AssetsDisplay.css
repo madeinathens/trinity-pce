@@ -1,0 +1,113 @@
+/* Trinity PCE — Assets Display Styles */
+
+.assets-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.assets-section .section-title {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: #00ff88;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.assets-loading,
+.assets-error {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #888;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.9rem;
+  border: 1px dashed rgba(0, 255, 136, 0.2);
+  background: rgba(0, 255, 136, 0.02);
+}
+
+.assets-error {
+  border-color: rgba(255, 68, 68, 0.3);
+  color: #ff6666;
+}
+
+/* ─── GRID ────────────────────────────────────────────────────────── */
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── TILE ────────────────────────────────────────────────────────── */
+
+.asset-tile {
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  padding: 1.25rem;
+  background: rgba(0, 255, 136, 0.02);
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  transition: border-color 0.2s ease;
+  text-align: left;
+}
+
+.asset-tile:hover {
+  border-color: rgba(0, 255, 136, 0.5);
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.asset-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.asset-value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.asset-number {
+  font-size: 1.6rem;
+  color: #00ff88;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+.asset-unit {
+  font-size: 0.7rem;
+  color: #888;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.asset-hint {
+  font-size: 0.7rem;
+  color: #555;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────── */
+
+@media (max-width: 500px) {
+  .assets-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .asset-tile {
+    padding: 1rem;
+  }
+
+  .asset-number {
+    font-size: 1.3rem;
+  }
+}
