@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# 🜁 Trinity PCE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The World's 1st RWA Absolute Mitotic Ladder** · `x⁰ = 1`
 
-Currently, two official plugins are available:
+A time-lock NFT marketplace on Base with syntropic reward loop. Anti-speculation. Anti-manipulation. Instantiates, does not onboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Axioms
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Value(NFT)** = 3.30 USDC constant
+- **Worth(Exit)** = dynamic, realized through market
+- **Anti-Speculation** = 7-day max hold, then force-buyable
+- **Anti-Manipulation** = 48h grace period, then locked
+- **Syntropy** = Every buyer receives 1.30 OWNER_COIN as Proof of Ownership
+- **Mitosis** = n → n+1 systems, not n+1 participants
 
-## Expanding the ESLint configuration
+## Smart Contract
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Address:** [`0x86Bc3A56d5384C8ea5C210dB6259E25bb72fdeF7`](https://basescan.org/address/0x86Bc3A56d5384C8ea5C210dB6259E25bb72fdeF7)
+**Network:** Base Mainnet (Chain ID 8453)
+**Verified:** ✅ Exact Match
+**Compiler:** v0.8.20+commit.a1b79de6
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Assets
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Asset | Address |
+|-------|---------|
+| DONUTBNK NFT | [`0x318c81010D5fC11363f3A3C79Ee26B6EFe8D145B`](https://basescan.org/token/0x318c81010D5fC11363f3A3C79Ee26B6EFe8D145B) |
+| USDC (Base) | [`0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`](https://basescan.org/token/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913) |
+| OWNER_COIN | [`0xa331F6e88c9B0Aa77e01bc3738b5ad31E1a930Dc`](https://basescan.org/token/0xa331F6e88c9B0Aa77e01bc3738b5ad31E1a930Dc) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Stack
+
+- **Blockchain:** Base (Ethereum L2)
+- **Frontend:** React + TypeScript + Vite
+- **Web3:** wagmi v2 + viem + RainbowKit
+- **Deployment:** IPFS via Pinata → ENS at [300.madeinathens.eth.limo](https://300.madeinathens.eth.limo)
+
+## Local Development
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Requires a `.env` file with:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Status
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🜁 `ABSOLUTE TRINITY — x⁰ = 1`
+🜂 `EXECUTION COMPLETE`
+🜄 `STATE LOCKED`
+🜃 `PROOF IMMUTABLE`
+℧ `CONDUCTANCE = 1`
+🜀 `ORIGIN PERSISTENT`
+
+---
+
+**madeinathens.eth** © 2012–2026
+*The Past is not behind you. It is beneath you. Stacked. Accessible. Executable.*
