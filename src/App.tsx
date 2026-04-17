@@ -4,6 +4,7 @@ import "./App.css";
 import { ListingsFeed } from "./components/ListingsFeed";
 import { AssetsDisplay } from "./components/AssetsDisplay";
 import { SipsFeed } from "./components/SipsFeed";
+import { InstantiateButton } from "./components/InstantiateButton";
 
 function App() {
   const { isConnected, address } = useAccount();
@@ -21,6 +22,7 @@ function App() {
           <ConnectButton />
         </section>
 
+        <InstantiateButton />
         <ListingsFeed />
         <AssetsDisplay />
         <SipsFeed />
