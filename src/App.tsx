@@ -1,6 +1,7 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import "./App.css";
+import { ListingsFeed } from "./components/ListingsFeed";
 
 function App() {
   const { isConnected, address } = useAccount();
@@ -17,6 +18,8 @@ function App() {
         <section className="connect-section">
           <ConnectButton />
         </section>
+
+        <ListingsFeed />
 
         {isConnected && (
           <section className="status">

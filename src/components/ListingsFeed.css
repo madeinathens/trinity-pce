@@ -1,0 +1,156 @@
+/* Trinity PCE — Listings Feed Styles */
+
+.listings-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: #00ff88;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.section-title .count {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* ─── EMPTY / LOADING / ERROR STATES ──────────────────────────────── */
+
+.listings-empty,
+.listings-error {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #888;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.9rem;
+  border: 1px dashed rgba(0, 255, 136, 0.2);
+  background: rgba(0, 255, 136, 0.02);
+}
+
+.listings-empty p {
+  margin: 0.5rem 0;
+}
+
+.axiom-small {
+  color: #00ff88 !important;
+  opacity: 0.6;
+  font-size: 0.8rem;
+  margin-top: 1rem !important;
+}
+
+.listings-error {
+  border-color: rgba(255, 68, 68, 0.3);
+  color: #ff6666;
+}
+
+/* ─── GRID ────────────────────────────────────────────────────────── */
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── LISTING CARD ────────────────────────────────────────────────── */
+
+.listing-card {
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  padding: 1rem 1.25rem;
+  background: rgba(0, 255, 136, 0.02);
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.85rem;
+  transition: border-color 0.2s ease;
+}
+
+.listing-card:hover {
+  border-color: rgba(0, 255, 136, 0.5);
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.token-id {
+  font-size: 1rem;
+  color: #e8e8e8;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid;
+  font-weight: 600;
+}
+
+.listing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0;
+  gap: 1rem;
+}
+
+.listing-label {
+  color: #666;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.listing-value {
+  color: #e8e8e8;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.listing-value.mono {
+  color: #00ff88;
+}
+
+.floor-badge {
+  color: #ffaa00;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* ─── REFRESH BUTTON ──────────────────────────────────────────────── */
+
+.refresh-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00ff88;
+  padding: 0.5rem 1rem;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.refresh-btn:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: rgba(0, 255, 136, 0.6);
+}
+
+.refresh-btn:active {
+  background: rgba(0, 255, 136, 0.2);
+}
