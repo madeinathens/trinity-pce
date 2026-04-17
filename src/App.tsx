@@ -3,6 +3,7 @@ import { useAccount } from "wagmi";
 import "./App.css";
 import { ListingsFeed } from "./components/ListingsFeed";
 import { AssetsDisplay } from "./components/AssetsDisplay";
+import { SipsFeed } from "./components/SipsFeed";
 
 function App() {
   const { isConnected, address } = useAccount();
@@ -22,6 +23,7 @@ function App() {
 
         <ListingsFeed />
         <AssetsDisplay />
+        <SipsFeed />
 
         {isConnected && (
           <section className="status">

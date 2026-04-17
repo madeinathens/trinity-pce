@@ -26,3 +26,8 @@ export const OWNER_COIN_DECIMALS = 18;
 export const APP_NAME = "Trinity PCE";
 export const APP_DESCRIPTION = "The World's 1st RWA Absolute Mitotic Ladder";
 export const APP_URL = "https://300.madeinathens.eth.limo";
+
+// ─── DEPLOYMENT ────────────────────────────────────────────────────────
+// Block where the Trinity contract was deployed on Base mainnet.
+// Used as fromBlock for event log queries (RPC 10k-block limit safety).
+export const GENESIS_BLOCK = 44805910n;
