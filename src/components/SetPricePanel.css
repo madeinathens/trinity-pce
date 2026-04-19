@@ -1,0 +1,266 @@
+/* Trinity PCE — Set Price Panel Styles */
+
+.myprice-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.myprice-section .section-title {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: #00ff88;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.myprice-section .count {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.myprice-intro {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  color: #888;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.02rem;
+  text-align: left;
+}
+
+/* ─── STATES ──────────────────────────────────────────────────────── */
+
+.myprice-loading,
+.myprice-error {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #888;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.9rem;
+  border: 1px dashed rgba(0, 255, 136, 0.2);
+  background: rgba(0, 255, 136, 0.02);
+}
+
+.myprice-error {
+  border-color: rgba(255, 68, 68, 0.3);
+  color: #ff6666;
+}
+
+/* ─── LISTING STACK ───────────────────────────────────────────────── */
+
+.listings-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ─── CARD ────────────────────────────────────────────────────────── */
+
+.listing-card {
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  padding: 1.25rem;
+  background: rgba(0, 255, 136, 0.03);
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  text-align: left;
+}
+
+.listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.listing-id {
+  font-size: 1.3rem;
+  color: #00ff88;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.listing-badge {
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid;
+  font-weight: 600;
+}
+
+.badge-grace {
+  color: #ffaa00;
+  border-color: rgba(255, 170, 0, 0.4);
+  background: rgba(255, 170, 0, 0.05);
+}
+
+.badge-live {
+  color: #00ff88;
+  border-color: rgba(0, 255, 136, 0.4);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.badge-expired {
+  color: #ff6666;
+  border-color: rgba(255, 102, 102, 0.4);
+  background: rgba(255, 102, 102, 0.05);
+}
+
+/* ─── PRICE DISPLAY ───────────────────────────────────────────────── */
+
+.listing-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid rgba(0, 255, 136, 0.4);
+  margin-bottom: 1rem;
+}
+
+.price-label {
+  color: #888;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.price-value {
+  color: #00ff88;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.price-value.dimmed {
+  color: #666;
+  opacity: 0.5;
+}
+
+/* ─── TIMERS ──────────────────────────────────────────────────────── */
+
+.listing-timers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.timer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.timer-label {
+  color: #888;
+  letter-spacing: 0.05rem;
+}
+
+.timer-label.expired {
+  color: #ff6666;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+}
+
+.timer-value {
+  color: #00ff88;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03rem;
+}
+
+/* ─── ACTIONS ─────────────────────────────────────────────────────── */
+
+.listing-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.price-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.price-input {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.6rem 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  color: #e8e8e8;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: rgba(0, 255, 136, 0.6);
+}
+
+.price-input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.price-unit {
+  color: #888;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+}
+
+.action-btn.small {
+  padding: 0.6rem 1rem;
+  font-size: 0.75rem;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 136, 0.5);
+  color: #00ff88;
+  font-family: inherit;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.action-btn.small:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: #00ff88;
+}
+
+.action-btn.small:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.action-btn.withdraw {
+  background: transparent;
+  border: 1px solid rgba(255, 170, 0, 0.4);
+  color: #ffaa00;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.action-btn.withdraw:hover:not(:disabled) {
+  background: rgba(255, 170, 0, 0.1);
+  border-color: #ffaa00;
+}
+
+.action-btn.withdraw:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

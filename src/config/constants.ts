@@ -31,3 +31,7 @@ export const APP_URL = "https://300.madeinathens.eth.limo";
 // Block where the Trinity contract was deployed on Base mainnet.
 // Used as fromBlock for event log queries (RPC 10k-block limit safety).
 export const GENESIS_BLOCK = 44805910n;
+
+// Block where DONUTBNK NFT was deployed on Base mainnet.
+// Used as fromBlock for Transfer event scanning.
+export const DONUTBNK_GENESIS_BLOCK = 43564787n;

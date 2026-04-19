@@ -5,6 +5,8 @@ import { ListingsFeed } from "./components/ListingsFeed";
 import { AssetsDisplay } from "./components/AssetsDisplay";
 import { SipsFeed } from "./components/SipsFeed";
 import { InstantiateButton } from "./components/InstantiateButton";
+import { DepositPanel } from "./components/DepositPanel";
+import { SetPricePanel } from "./components/SetPricePanel";
 
 function App() {
   const { isConnected, address } = useAccount();
@@ -23,6 +25,8 @@ function App() {
         </section>
 
         <InstantiateButton />
+        <DepositPanel />
+        <SetPricePanel />
         <ListingsFeed />
         <AssetsDisplay />
         <SipsFeed />

@@ -1,0 +1,273 @@
+/* Trinity PCE — Deposit Panel Styles */
+
+.deposit-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.deposit-section .section-title {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: #00ff88;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ─── INTRO ───────────────────────────────────────────────────────── */
+
+.deposit-intro {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.deposit-intro p {
+  margin: 0.3rem 0;
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.deposit-intro strong {
+  color: #00ff88;
+  font-weight: 600;
+}
+
+.intro-sub {
+  color: #666 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.05rem;
+}
+
+/* ─── STATES (loading / error / empty / disabled) ────────────────── */
+
+.deposit-loading,
+.deposit-empty,
+.deposit-error,
+.deposit-disabled {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #888;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.9rem;
+  border: 1px dashed rgba(0, 255, 136, 0.2);
+  background: rgba(0, 255, 136, 0.02);
+}
+
+.deposit-loading p,
+.deposit-empty p,
+.deposit-error p {
+  margin: 0.5rem 0;
+}
+
+.progress-text {
+  color: #00ff88 !important;
+  opacity: 0.7;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.05rem;
+}
+
+.deposit-error {
+  border-color: rgba(255, 68, 68, 0.3);
+  color: #ff6666;
+}
+
+.axiom-small {
+  color: #00ff88 !important;
+  opacity: 0.6;
+  font-size: 0.8rem !important;
+  margin-top: 1rem !important;
+}
+
+.retry-btn {
+  background: transparent;
+  border: 1px solid #ff6666;
+  color: #ff6666;
+  padding: 0.5rem 1.25rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.retry-btn:hover {
+  background: rgba(255, 102, 102, 0.1);
+}
+
+/* ─── TOKEN GRID ──────────────────────────────────────────────────── */
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.token-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  color: #e8e8e8;
+  padding: 1.25rem 0.5rem;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.token-card:hover:not(:disabled) {
+  border-color: rgba(0, 255, 136, 0.6);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.token-card.selected {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.token-card:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.token-id {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00ff88;
+  letter-spacing: 0.05rem;
+}
+
+.token-label {
+  font-size: 0.65rem;
+  color: #666;
+  letter-spacing: 0.15rem;
+}
+
+/* ─── ACTIONS AREA ────────────────────────────────────────────────── */
+
+.deposit-actions {
+  padding: 1.25rem;
+  background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  margin-bottom: 1.5rem;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+.selected-label {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05rem;
+  text-align: left;
+}
+
+.selected-label strong {
+  color: #00ff88;
+  font-weight: 600;
+}
+
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.step-label {
+  color: #666;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  min-width: 55px;
+}
+
+.step-row.step-done .step-label {
+  color: #00ff88;
+  opacity: 0.7;
+}
+
+.step-status {
+  color: #00ff88;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  letter-spacing: 0.03rem;
+}
+
+.action-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 136, 0.5);
+  color: #00ff88;
+  padding: 0.6rem 1.25rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+.action-btn:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: #00ff88;
+}
+
+.action-btn.primary {
+  border-width: 2px;
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.action-btn.primary:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.15);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── SUCCESS ─────────────────────────────────────────────────────── */
+
+.deposit-success {
+  padding: 1rem 1.25rem;
+  background: rgba(0, 255, 136, 0.08);
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* ─── NOTICE ──────────────────────────────────────────────────────── */
+
+.deposit-notice {
+  padding: 0.8rem 1rem;
+  border-left: 2px solid rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.01);
+  color: #888;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: left;
+}
+
+.deposit-notice strong {
+  color: #00ff88;
+  font-weight: 600;
+}
