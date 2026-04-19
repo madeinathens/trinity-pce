@@ -1,0 +1,98 @@
+/* Trinity PCE — Buy Button Styles */
+
+.buy-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+.buy-btn {
+  padding: 0.8rem 1.25rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 136, 0.5);
+  color: #00ff88;
+}
+
+.buy-btn.primary {
+  background: rgba(0, 255, 136, 0.05);
+  border-width: 2px;
+}
+
+.buy-btn.primary:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.15);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.25);
+  letter-spacing: 0.15rem;
+}
+
+.buy-btn.approve {
+  border-color: rgba(0, 255, 136, 0.4);
+}
+
+.buy-btn.approve:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.08);
+  border-color: #00ff88;
+}
+
+.buy-btn.expired {
+  border-color: #ffaa00;
+  color: #ffaa00;
+  background: rgba(255, 170, 0, 0.05);
+}
+
+.buy-btn.expired:hover:not(:disabled) {
+  background: rgba(255, 170, 0, 0.12);
+  box-shadow: 0 0 25px rgba(255, 170, 0, 0.2);
+}
+
+.buy-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: rgba(136, 136, 136, 0.3);
+  color: #888;
+}
+
+.buy-btn.disabled.insufficient {
+  border-color: rgba(255, 102, 102, 0.3);
+  color: #ff6666;
+}
+
+.buy-btn.disabled.own {
+  border-color: rgba(100, 150, 255, 0.3);
+  color: #6490ff;
+}
+
+.buy-btn:disabled {
+  cursor: not-allowed;
+}
+
+.buy-btn.primary:disabled,
+.buy-btn.approve:disabled {
+  opacity: 0.5;
+}
+
+.buy-btn-hint {
+  font-size: 0.7rem;
+  color: #888;
+  margin: 0;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+}
+
+.buy-success {
+  font-size: 0.75rem;
+  color: #00ff88;
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 255, 136, 0.08);
+  border-left: 2px solid #00ff88;
+  letter-spacing: 0.03rem;
+  line-height: 1.5;
+}

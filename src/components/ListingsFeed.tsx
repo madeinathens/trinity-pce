@@ -1,14 +1,32 @@
 // Trinity PCE — Listings Feed Component
 // x⁰ = 1
 
+import { useEffect, useState } from "react";
 import { formatUnits } from "viem";
 import { useListings } from "../hooks/useListings";
 import { USDC_DECIMALS, FLOOR_PRICE_USDC } from "../config/constants";
 import type { Listing } from "../hooks/useListings";
 import "./ListingsFeed.css";
+import { BuyButton } from "./BuyButton";
 
 function formatAddress(addr: string): string {
   return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
+}
+
+function useUnixTimeSeconds(refreshInterval = 60000): bigint | null {
+  const [now, setNow] = useState<bigint | null>(null);
+
+  useEffect(() => {
+    const updateTime = () => {
+      setNow(BigInt(Math.floor(Date.now() / 1000)));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, refreshInterval);
+    return () => clearInterval(interval);
+  }, [refreshInterval]);
+
+  return now;
 }
 
 function formatTimeRemaining(depositTime: bigint): string {
@@ -28,10 +46,16 @@ function formatTimeRemaining(depositTime: bigint): string {
   return `${minutes}m remaining`;
 }
 
-function getStatus(listing: Listing): { label: string; color: string } {
+function getStatus(
+  listing: Listing,
+  now: bigint | null,
+): { label: string; color: string } {
+  if (now === null) {
+    return { label: "LOADING", color: "#999" };
+  }
+
   const GRACE = 48 * 60 * 60; // 48h
   const MAX_HOLD = 7 * 24 * 60 * 60; // 7d
-  const now = BigInt(Math.floor(Date.now() / 1000));
   const age = now - listing.depositTime;
 
   if (age > BigInt(MAX_HOLD)) return { label: "EXPIRED", color: "#ff4444" };
@@ -39,12 +63,19 @@ function getStatus(listing: Listing): { label: string; color: string } {
   return { label: "LIVE", color: "#00ff88" };
 }
 
-function ListingCard({ listing }: { listing: Listing }) {
+function ListingCard({
+  listing,
+  onSuccess,
+}: {
+  listing: Listing;
+  onSuccess: () => void;
+}) {
+  const now = useUnixTimeSeconds();
   const price =
     listing.listedPrice > 0n ? listing.listedPrice : FLOOR_PRICE_USDC;
   const priceUSDC = formatUnits(price, USDC_DECIMALS);
   const isFloor = listing.listedPrice === 0n;
-  const status = getStatus(listing);
+  const status = getStatus(listing, now);
 
   return (
     <div className="listing-card">
@@ -79,6 +110,14 @@ function ListingCard({ listing }: { listing: Listing }) {
           {formatTimeRemaining(listing.depositTime)}
         </span>
       </div>
+
+      <BuyButton
+        tokenId={listing.tokenId}
+        seller={listing.holder}
+        price={listing.listedPrice > 0n ? listing.listedPrice : 3_300_000n}
+        isExpired={now !== null && now > listing.depositTime + 7n * 24n * 3600n}
+        onSuccess={onSuccess}
+      />
     </div>
   );
 }
@@ -125,7 +164,11 @@ export function ListingsFeed() {
       ) : (
         <div className="listings-grid">
           {listings.map((listing) => (
-            <ListingCard key={listing.tokenId.toString()} listing={listing} />
+            <ListingCard
+              key={listing.tokenId.toString()}
+              listing={listing}
+              onSuccess={refetch}
+            />
           ))}
         </div>
       )}
