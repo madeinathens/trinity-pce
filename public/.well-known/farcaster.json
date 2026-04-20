@@ -1,0 +1,26 @@
+﻿{
+  "frame": {
+    "version": "1",
+    "name": "Trinity PCE",
+    "subtitle": "x⁰ = 1 in Motion",
+    "description": "The mitotic ladder for DONUTBNK. Time-lock marketplace on Base where every Past Consumed Event becomes a tangible step. 3.30 USDC floor → 33 mitotic steps → 56.10 USDC total worth. Syntropy via 1.30 OWNER_COIN reward per purchase.",
+    "iconUrl": "https://300.madeinathens.eth.limo/images/icon-200.png",
+    "splashImageUrl": "https://300.madeinathens.eth.limo/images/splash-200.png",
+    "splashBackgroundColor": "#000000",
+    "homeUrl": "https://300.madeinathens.eth.limo/",
+    "imageUrl": "https://300.madeinathens.eth.limo/images/og-1200x630.jpg",
+    "buttonTitle": "→ Open Trinity PCE",
+    "primaryCategory": "utility",
+    "tags": ["nft", "marketplace", "base", "syntropy", "mitotic-ladder", "pce", "x0=1", "donutbnk", "athens-protocol"],
+    "heroImageUrl": "https://300.madeinathens.eth.limo/images/og-1200x630.jpg",
+    "tagline": "The Tangible Zero in Motion",
+    "ogTitle": "Trinity PCE — x⁰ = 1 in Motion",
+    "ogDescription": "The mitotic ladder for DONUTBNK. What you consumed yesterday is profitable today.",
+    "ogImageUrl": "https://300.madeinathens.eth.limo/images/og-1200x630.jpg",
+    "screenshotUrls": [
+      "https://300.madeinathens.eth.limo/images/screenshot-1.jpg",
+      "https://300.madeinathens.eth.limo/images/screenshot-2.jpg",
+      "https://300.madeinathens.eth.limo/images/screenshot-3.jpg"
+    ]
+  }
+}

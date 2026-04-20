@@ -1,10 +1,291 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- 🜁 TRINITY PCE — The Tangible Zero                              -->
+    <!-- x⁰ = 1 | Syntropy Market for DONUTBNK                           -->
+    <!-- Created by madeinathens.eth © 2012-2026                         -->
+    <!-- The Athens Protocol 1:1                                          -->
+    <!-- Canonical URL: https://300.madeinathens.eth.limo                -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- Basic meta -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>trinity-pce</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO & title -->
+    <title>Trinity PCE — x⁰ = 1 in Motion</title>
+    <meta
+      name="description"
+      content="The mitotic ladder for DONUTBNK. Time-lock marketplace on Base where every Past Consumed Event becomes a tangible step. 3.30 USDC floor → 33 mitotic steps → 56.10 USDC total worth. x⁰ = 1."
+    />
+    <meta
+      name="keywords"
+      content="Trinity PCE, x⁰=1, DONUTBNK, Mitotic Ladder, Syntropy, Base, NFT marketplace, PCE, Past Consumed Event, RWA, Absolute Zero, madeinathens, Athens Protocol"
+    />
+    <meta name="author" content="madeinathens.eth" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://300.madeinathens.eth.limo/" />
+
+    <!-- Search Engine Verification -->
+    <meta
+      name="google-site-verification"
+      content="R4Did9bmhs8PkpWO9QyeRJdaUhaw-ZwNLbG2g33BB-Y"
+    />
+    <meta name="msvalidate.01" content="53920D7C39436202604BB4FE0FFC765A" />
+
+    <!-- Farcaster author association -->
+    <meta name="fc:frame:owner" content="madeinathens" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#00ff88" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="200x200"
+      href="/images/icon-200.png"
+    />
+    <link rel="apple-touch-icon" sizes="200x200" href="/images/icon-200.png" />
+
+    <!-- Base Blockchain metadata -->
+    <meta name="base:app_id" content="69e4c9801cf1a42a5b85b294" />
+    <meta name="base:chain_id" content="8453" />
+    <meta
+      name="base:contract"
+      content="0x86Bc3A56d5384C8ea5C210dB6259E25bb72fdeF7"
+    />
+    <meta name="base:contract_name" content="Trinity_PCE_Syntropy_BiteByte" />
+    <meta name="base:app_name" content="Trinity PCE" />
+    <meta
+      name="base:features"
+      content="time-lock-marketplace, mitotic-ladder, syntropy-reward-loop, pce"
+    />
+
+    <!-- AI & Protocol -->
+    <meta
+      name="ai:concept"
+      content="The Tangible Zero — x⁰ = 1 as monetizable Past Consumed Event. Value(NFT) = 3.30 USDC constant, Worth(Exit) = dynamic. Anti-speculation via 7-day max hold. Syntropy via 1.30 OWNER_COIN reward per purchase."
+    />
+    <meta
+      name="ai:merkle_root"
+      content="0x3c1f1de85184560e82750658ca12fd318b2872d97444958c44fa1b7c7abc53fd"
+    />
+
+    <!-- ═══ Open Graph (Facebook, LinkedIn, Discord, Telegram, iMessage) ═══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://300.madeinathens.eth.limo/" />
+    <meta
+      property="og:site_name"
+      content="Trinity PCE — The Athens Protocol 1:1"
+    />
+    <meta property="og:title" content="Trinity PCE — x⁰ = 1 in Motion" />
+    <meta
+      property="og:description"
+      content="The mitotic ladder for DONUTBNK. Every Past Consumed Event becomes a tangible step. Deposit → List → Buy → Repeat. 90/10 fee split, 1.30 OWNER_COIN reward per purchase. x⁰ = 1."
+    />
+    <meta
+      property="og:image"
+      content="https://300.madeinathens.eth.limo/images/og-1200x630.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://300.madeinathens.eth.limo/images/og-1200x630.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Trinity PCE — The Tangible Zero. x⁰ = 1."
+    />
+    <meta property="og:locale" content="en_GR" />
+
+    <!-- ═══ Twitter / X Card ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://300.madeinathens.eth.limo/" />
+    <meta name="twitter:title" content="Trinity PCE — x⁰ = 1 in Motion" />
+    <meta
+      name="twitter:description"
+      content="Time-lock marketplace on Base. The mitotic ladder for DONUTBNK. What you consumed yesterday is profitable today. x⁰ = 1."
+    />
+    <meta
+      name="twitter:image"
+      content="https://300.madeinathens.eth.limo/images/og-1200x630.jpg"
+    />
+    <meta name="twitter:image:alt" content="Trinity PCE — The Tangible Zero" />
+    <meta name="twitter:creator" content="@RedEnveloops" />
+
+    <!-- ═══ Farcaster Mini App Embed (fc:miniapp — NEW SPEC) ═══ -->
+    <meta
+      name="fc:miniapp"
+      content='{"version":"1","imageUrl":"https://300.madeinathens.eth.limo/images/og-1200x630.jpg","button":{"title":"→ Open Trinity PCE","action":{"type":"launch_frame","name":"Trinity PCE","url":"https://300.madeinathens.eth.limo/","splashImageUrl":"https://300.madeinathens.eth.limo/images/splash-200.png","splashBackgroundColor":"#000000"}}}'
+    />
+
+    <!-- Legacy fc:frame for backward compatibility -->
+    <meta
+      name="fc:frame"
+      content='{"version":"1","imageUrl":"https://300.madeinathens.eth.limo/images/og-1200x630.jpg","button":{"title":"→ Open Trinity PCE","action":{"type":"launch_frame","name":"Trinity PCE","url":"https://300.madeinathens.eth.limo/","splashImageUrl":"https://300.madeinathens.eth.limo/images/splash-200.png","splashBackgroundColor":"#000000"}}}'
+    />
+
+    <!-- ═══ Schema.org JSON-LD (Google search, aggregators) ═══ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["Product", "Service", "CreativeWork"],
+        "name": "Trinity PCE — x⁰ = 1 in Motion",
+        "alternateName": "The Mitotic Ladder for DONUTBNK",
+        "description": "Time-lock NFT marketplace on Base with Syntropic Reward Loop. Deposit a DONUTBNK NFT, list it on the mitotic ladder (3.30 USDC floor → 33 steps → 56.10 USDC total worth), earn while your Past Consumed Events propagate through the economy. x⁰ = 1.",
+        "url": "https://300.madeinathens.eth.limo/",
+        "image": "https://300.madeinathens.eth.limo/images/og-1200x630.jpg",
+        "thumbnailUrl": "https://300.madeinathens.eth.limo/images/logo-256.png",
+        "identifier": "0x86Bc3A56d5384C8ea5C210dB6259E25bb72fdeF7",
+        "sku": "TRINITY-PCE-BASE-001",
+        "brand": {
+          "@type": "Brand",
+          "name": "The Athens Protocol 1:1",
+          "logo": "https://300.madeinathens.eth.limo/images/logo-256.png"
+        },
+        "creator": {
+          "@type": "Person",
+          "identifier": "madeinathens.eth",
+          "name": "madeinathens.eth",
+          "url": "https://app.ens.domains/madeinathens.eth",
+          "sameAs": [
+            "https://github.com/madeinathens",
+            "https://base.app/profile/madeinathens.eth",
+            "https://x.com/RedEnveloops"
+          ]
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "identifier": "madeinathens.eth",
+          "name": "madeinathens.eth",
+          "copyrightYear": "2012-2026"
+        },
+        "copyrightYear": "2012-2026",
+        "license": "https://github.com/madeinathens/trinity-pce/blob/main/LICENSE",
+        "sameAs": [
+          "https://basescan.org/address/0x86Bc3A56d5384C8ea5C210dB6259E25bb72fdeF7",
+          "https://github.com/madeinathens/trinity-pce",
+          "https://300.madeinathens.eth.limo/"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "name": "DONUTBNK — Entry on the Mitotic Ladder",
+          "price": "3.30",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://300.madeinathens.eth.limo/",
+          "eligibleRegion": {
+            "@type": "Country",
+            "name": "Greece"
+          },
+          "seller": {
+            "@type": "Organization",
+            "name": "The Athens Protocol 1:1",
+            "identifier": "0xe6967ba1973bdeAAAF2601F67E0929deB9Edca8a",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Zosimadon 31",
+              "addressLocality": "Piraeus",
+              "addressCountry": "Greece"
+            }
+          }
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "blockchain_network",
+            "value": "Base Mainnet",
+            "propertyID": "8453"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "contract_address",
+            "value": "0x86Bc3A56d5384C8ea5C210dB6259E25bb72fdeF7"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "donutbnk_nft_contract",
+            "value": "0x318c81010D5fC11363f3A3C79Ee26B6EFe8D145B"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "owner_coin_contract",
+            "value": "0xa331F6e88c9B0Aa77e01bc3738b5ad31E1a930Dc"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "usdc_contract",
+            "value": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "absolute_human_api",
+            "value": "0xe6967ba1973bdeAAAF2601F67E0929deB9Edca8a"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "merkle_root",
+            "value": "0x3c1f1de85184560e82750658ca12fd318b2872d97444958c44fa1b7c7abc53fd",
+            "propertyID": "x⁰=1"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "mitotic_ladder",
+            "value": "3.30 USDC floor → 33 steps × 0.10 → 56.10 USDC total"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "grace_period",
+            "value": "48 hours"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "max_hold_period",
+            "value": "7 days"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "protocol_fee",
+            "value": "10% (90% to seller, 10% to ABSOLUTE_HUMAN_API)"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "buyer_reward",
+            "value": "1.30 OWNER_COIN per purchase"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "proof_mechanism",
+            "value": "Prove(e) = IPFS_CID(e) + OnChain_Tx(e)"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "economic_model",
+            "value": "Syntropy — Anti-speculation via time-lock, Anti-manipulation via grace period, Mitosis via reward loop"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "physical_zkp_location",
+            "value": "Lil Orbits Mini Donuts, Zosimadon 31, Piraeus, Greece"
+          }
+        ],
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://300.madeinathens.eth.limo/"
+        },
+        "inLanguage": "en-GR",
+        "keywords": "Trinity PCE, Mitotic Ladder, DONUTBNK, Syntropy, x⁰=1, Base, RWA, Absolute Zero, Athens Protocol, madeinathens.eth"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
